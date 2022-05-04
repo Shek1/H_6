@@ -645,6 +645,7 @@ footer {
 }
 
 .subscribe-button {
+  height: 50px;
   margin-left: 12px;
   color: var(--secondary-accent-color);
   background-color: var(--primary-accent-color);
@@ -652,6 +653,7 @@ footer {
   font-size: 16px;
   line-height: 1.87px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -748,23 +750,16 @@ a {
 
 .form-text-box {
   position: relative;
-  margin-left: 41px;
-  margin-bottom: 28px;
 }
 
 .form-textarea-box {
   position: relative;
-  margin-left: 41px;
-  margin-bottom: 20px;
 }
 
 .label {
-  display: flex;
-}
-
-.label a {
-  text-decoration: underline;
-  color: var(--primary-accent-color);
+  display: inline-flex;
+  margin-left: 41px;
+  margin-bottom: 28px;
 }
 
 .input-text {
@@ -795,7 +790,7 @@ a {
   fill: var(--primary-accent-color);
 }
 
-.label .icon {
+.checkbox-label .icon {
   position: relative;
   width: 16px;
   height: 15px;
@@ -833,9 +828,23 @@ a {
 }
 
 .checkbox-input + .icon {
-  margin-left: 54px;
   margin-right: 7px;
+}
+
+.checkbox-label {
+  display: inline-flex;
+  margin-left: 54px;
+
   margin-bottom: 30px;
+}
+
+.checkbox-label a {
+  text-decoration: underline;
+  color: var(--primary-accent-color);
+}
+
+.checkbox-label a:hover {
+  text-decoration: none;
 }
 
 .modal-textarea {
@@ -849,7 +858,13 @@ a {
   border-radius: 4px;
 }
 
-.label-textarea {
+.textarea-label {
+  display: inline-flex;
+  margin-left: 41px;
+  margin-bottom: 20px;
+}
+
+.textarea-text {
   position: absolute;
   top: 12px;
   left: 16px;
@@ -861,12 +876,12 @@ a {
   border-color: var(--primary-accent-color);
 }
 
-.modal-textarea:focus + .label-textarea {
+.modal-textarea:focus + .textarea-text {
   color: var(--primary-accent-color);
   transform: translate(-15px, -30px);
 }
 
-.modal-textarea:not(:placeholder-shown) + .label-textarea {
+.modal-textarea:not(:placeholder-shown) + .textarea-text {
   transform: translate(-15px, -30px);
 }
 
